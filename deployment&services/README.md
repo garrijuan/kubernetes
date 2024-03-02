@@ -1,9 +1,7 @@
 
-|Starting with Kubernetes, understanding the basics of Deployment and Services is crucial. A Deployment defines how an application is deployed in the cluster, specifying the desired state and update strategies, while a Service handles communication within the cluster, exposing and connecting applications, allowing external access, and routing traffic to pods. These concepts are fundamental for efficiently managing applications in Kubernetes|
+Starting with Kubernetes, understanding the basics of Deployment and Services is crucial. A Deployment defines how an application is deployed in the cluster, specifying the desired state and update strategies, while a Service handles communication within the cluster, exposing and connecting applications, allowing external access, and routing traffic to pods. These concepts are fundamental for efficiently managing applications in Kubernetes
 # Deployment
-```
 A Kubernetes deployment is a set of files defining how an application or microservices are deployed in a Kubernetes cluster. These files, known as deployment files, are used by developers and administrators to manage the application lifecycle within Kubernetes. They specify the desired state of the deployment, including pod replicas, container images, resource limits, and update strategies like rolling updates. In essence, Kubernetes deployments enable declarative application management, scaling, and rolling updates.
-```
 
 ## example -> deployment.yml
 ```
@@ -17,12 +15,8 @@ A Kubernetes deployment is a set of files defining how an application or microse
 -name: Specifies the name oof container
 -image: specifies the Docker Image name that will be used to run the container
 ```
-
-
 # Service
-```
 A Kubernetes service is a configuration file that contains networking information. It defines how networking will be managed within the cluster, including enabling load balancing for applications, which is a premium feature of Kubernetes. The service file specifies the service's name, type (such as ClusterIP, NodePort, LoadBalancer), and selectors to route traffic to pods. Developers and administrators use service files to expose and connect applications within the Kubernetes cluster
-```
 ## example -> service.yml
 ```
 -apiVersion and Kind: Define the resource type
@@ -35,7 +29,6 @@ A Kubernetes service is a configuration file that contains networking informatio
 ```
 
 ### type
-```
 ClusterIP:
     -Purpose: This type of service exposes the service on an internal IP address, accessible only from within the cluster.
     -Operation: It allows communication between different components within the cluster but does not expose the service externally.
@@ -52,7 +45,7 @@ LoadBalancer:
     -Usage: It's ideal for production applications requiring external access with high availability and automatic scalability.
 
 In summary, each type of service in Kubernetes serves a specific purpose and provides different levels of access and exposure for services within the cluster.
-```
+
 
 # Kubectl Deploying
 ```sh

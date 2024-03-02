@@ -1,0 +1,32 @@
+# Deployment basic example
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apppython
+spec:
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: apppython
+  template:
+    metadata:
+      labels:
+        app: apppython
+    spec:
+      #Specifying a user and group is good practice to avoid running the container as root. In the event of malicious access, privilege escalation is prevented
+      securityContext:
+        runAsUser: 1001
+        runAsGroup: 3000
+        fsGroup: 2000    
+      restartPolicy: Always
+      containers:
+      - name: apppython
+        image:  garrijuan/test_api_python:latest # Base image used, in this case, it is registered on DockerHub
+        env:
+        - name: API_PORT
+          value: "80"
+        ports:
+        - containerPort: 80     # The exposed port of the pod
+  replicas: 2     # Number of replicated pods within the node

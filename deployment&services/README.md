@@ -30,19 +30,21 @@ A Kubernetes service is a configuration file that contains networking informatio
 
 ### type
 **ClusterIP**:
+```
     -Purpose: This type of service exposes the service on an internal IP address, accessible only from within the cluster.
     -Operation: It allows communication between different components within the cluster but does not expose the service externally.
     -Usage: It's useful when you need to access the service only from other components within the cluster.
+```
 **NodePort**:
     -Purpose: This type of service exposes the service on a specific port of each node in the cluster.
     -Operation: It allows access to the service from outside the cluster using the node's IP address and the assigned port.
     -Usage: It's used when direct external access to the service is needed, but it's not ideal for production applications due to potential security and scalability issues.
 **LoadBalancer**:
-    >-Purpose: This type of service exposes the service through an external load balancer that distributes traffic among various nodes in the cluster.
-    >
-    >-Operation: It provides a single external IP address that directs traffic to the service, distributing it among the cluster nodes to maintain high availability and scalability.
-    >
-    >-Usage: It's ideal for production applications requiring external access with high availability and automatic scalability.
+```
+    -Purpose: This type of service exposes the service through an external load balancer that distributes traffic among various nodes in the cluster.
+    -Operation: It provides a single external IP address that directs traffic to the service, distributing it among the cluster nodes to maintain high availability and scalability.
+    -Usage: It's ideal for production applications requiring external access with high availability and automatic scalability.
+```
 In summary, each type of service in Kubernetes serves a specific purpose and provides different levels of access and exposure for services within the cluster.
 
 

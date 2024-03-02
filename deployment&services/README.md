@@ -1,4 +1,7 @@
 
+```
+Starting with Kubernetes, understanding the basics of Deployment and Services is crucial. A Deployment defines how an application is deployed in the cluster, specifying the desired state and update strategies, while a Service handles communication within the cluster, exposing and connecting applications, allowing external access, and routing traffic to pods. These concepts are fundamental for efficiently managing applications in Kubernetes
+```
 # Deployment
 ```
 A Kubernetes deployment is a set of files defining how an application or microservices are deployed in a Kubernetes cluster. These files, known as deployment files, are used by developers and administrators to manage the application lifecycle within Kubernetes. They specify the desired state of the deployment, including pod replicas, container images, resource limits, and update strategies like rolling updates. In essence, Kubernetes deployments enable declarative application management, scaling, and rolling updates.
@@ -52,3 +55,12 @@ LoadBalancer:
 
 In summary, each type of service in Kubernetes serves a specific purpose and provides different levels of access and exposure for services within the cluster.
 ```
+
+# Kubectl Deploying
+```sh
+minikube start
+kubectl apply -f deployment.yml
+kubectl apply -f deployment.yml
+kubectl get all
+```
+![alt text](/images/kubectlall.png "status")

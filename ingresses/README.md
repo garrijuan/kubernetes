@@ -44,3 +44,22 @@ kubectl describe ingress
 ```
 ![alt text](/images/ingress.png "ingress")
 
+In the next step, we will perform a 2e2 test of a simple API to ensure that we have communication through the Ingress. But first, we need to make a small preliminary configuration.
+
+When using Minikube to run a Kubernetes cluster locally, you may need to configure your /etc/hosts file to enable access to the services you deploy in your cluster.
+
+
+The main reason is that Minikube uses a virtual machine to run the Kubernetes cluster in your local environment. By default, services deployed in the cluster are not directly accessible from your host operating system. By configuring your /etc/hosts file, you assign hostnames to IP addresses within the Minikube virtual machine, allowing your host operating system to resolve those hostnames and redirect requests to the Kubernetes cluster.
+
+```sh
+minikube ip
+sudo nano /etc/host #add minikube ip to the list
+sudo cat /etc/host
+```
+
+We have applied deployment, service, and Ingress. Everything is up and running and ready to work. We make the following curl request and verify that it is correct. We also check it from the browser. A GET request is made against an API that returns the message 'Hello World'.
+
+```sh
+curl http://apppython
+```
+![alt text](/images/testingress.png "test ingress")

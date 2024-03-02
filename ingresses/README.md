@@ -35,3 +35,12 @@ based on the Website’s URL such as garrijuan.example.com.
 ![alt text](/images/hostrouting.png "host routing")
 
 
+# example ingress
+```sh
+minikube start
+minikube minikube addons enable ingress
+kubectl apply -f ingress.yml
+kubectl describe ingress
+```
+![alt text](/images/ingress.png "ingress")
+

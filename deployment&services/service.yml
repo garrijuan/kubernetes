@@ -1,0 +1,16 @@
+# Service example
+apiVersion: v1
+kind: Service
+metadata:
+  name: apppython
+  labels:
+    app: apppython
+spec:
+  selector:
+    app: apppython
+  ports:
+  - port: 8081
+    targetPort: 80 #The port of the pod to which I send the request
+    protocol: TCP
+    name: apppython-port
+  type: ClusterIP

@@ -1,0 +1,1 @@
+HELM is a package manager for Kubernetes applications. It helps in defining, installing, and managing Kubernetes applications. HELM uses charts, which are packages of pre-configured Kubernetes resources. These charts can be easily shared and version-controlled.

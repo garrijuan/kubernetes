@@ -3,7 +3,7 @@
 
 **Deployment and Service** - Documentation on deploying applications and configuring services.
 
-**Helm** - Package manager for Kubernetes, managing applications and dependencies.
+[**Helm**](./helm) - Package manager for Kubernetes, managing applications and dependencies.
 
 **Ingress** - Configuration of Ingress resources for external access to services.
 

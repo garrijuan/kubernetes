@@ -1,10 +1,10 @@
 # kubernetes
 **kubernetes documentation**
 
-**Deployment and Service** - Documentation on deploying applications and configuring services.
+[**Deployment and Service**](./deployment&services) - Documentation on deploying applications and configuring services.
 
 [**Helm**](./helm) - Package manager for Kubernetes, managing applications and dependencies.
 
-**Ingress** - Configuration of Ingress resources for external access to services.
+[**Ingress**](./ingresses) - Configuration of Ingress resources for external access to services.
 
-**Network Policies** - Definition and implementation of network policies for traffic control.
+[**Network Policies**] (./network policies)- Definition and implementation of network policies for traffic control.

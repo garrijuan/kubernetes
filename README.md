@@ -7,4 +7,4 @@
 
 [**Ingress**](./ingresses) - Configuration of Ingress resources for external access to services.
 
-[**Network Policies**] (./network-policies)- Definition and implementation of network policies for traffic control.
+[**Network Policies**](./network-policies)- Definition and implementation of network policies for traffic control.

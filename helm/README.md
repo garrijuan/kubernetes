@@ -29,9 +29,9 @@ helm install -f values.yaml bitnami/wordpress --generate-name
         host: example
 
 helm template mychart ./apppython             # Show all deployment
-helm package apppython/                       # Pakage me chart in a .tgz
-helm upgrade apppython ./apppython-0.1.0.tgz  # Deploy the new package chart
-helm repo index --url https://github.com/garrijuan/app-python-CICD/blob/main/HELM/apppython/charts/ . # Upload Chart on the artifactory repository
+helm package apppython/                       # Package me chart in a .tgz
+helm upgrade apppython ./apppython-0.1.0.tgz  # Package a new version of the chart
+helm repo index --url https://github.com/garrijuan/app-python-CICD/blob/main/HELM/apppython/charts/ . # Generate or update the index of repository
 
 
 helm repo add argo https://argoproj.github.io/argo-helm  # Add a chart to local environment

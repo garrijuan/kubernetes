@@ -9,6 +9,13 @@ Ingress enables Path-based and Host-based routing.
 
 Ingress supports Load balancing and SSL termination.
 
+## Ingress NGINX Controller
+
+ingress-nginx is an Ingress controller for Kubernetes using [NGINX](https://www.nginx.org/) as a reverse proxy and load
+balancer.
+
+[Learn more about Ingress on the Kubernetes documentation site](https://kubernetes.io/docs/concepts/services-networking/ingress/).
+
 ## Explanation
 
 kubernetes Ingress is like a cop for your applications that are running on your Kubernetes cluster. It redirects the incoming requests to the right services based on the Web URL or path in the address.
